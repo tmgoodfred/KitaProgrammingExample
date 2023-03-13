@@ -13,16 +13,19 @@ namespace KitaProgrammingExample
             string songTitle = songTxt.Text;    //this takes the text entered from the user in the text box and stores it in a string
             string artistName = artistTxt.Text; //this takes the text entered from the user in the text box and stores it in a string
             bool existsFlag = false;    //this will be used to determine if a song already exists
+            bool valueEntered = false;
+
+            valueEntered = userEnteredValue(songTitle); //need to actually do something with this, such as donig a while loop or an if statement
 
             existsFlag = CheckIfItemExists(songs, songTitle);   //this calls the method we created below. If a match is found, it's true, else it's false
 
             if (existsFlag == true) //if it exists, we want to trigger some code
             {
-                outputTxt.Text = "We have it!"; //nothing will happen essentially
+                setOutput(true); //nothing will happen essentially
             }
             else
             {
-                outputTxt.Text = "We'll add it.";
+                setOutput(false);
                 songs.Add(songTitle);   //if the song doesn't exist, we add it to the list
             }
         }
@@ -44,6 +47,26 @@ namespace KitaProgrammingExample
                 }
             }
             return flag;    //this sends back the flag
+        }
+
+        public bool userEnteredValue(string enteredValue)
+        {
+            if (string.IsNullOrWhiteSpace(enteredValue))
+            {
+                return false;
+            }
+            else
+                return true;
+        }
+
+        public void setOutput(bool result)
+        {
+            if(result == true)
+            {
+                outputTxt.Text = "We have it!";
+            }
+            else
+                outputTxt.Text = "We'll add it.";
         }
     }
 }

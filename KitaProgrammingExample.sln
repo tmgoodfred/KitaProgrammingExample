@@ -5,7 +5,9 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitaProgrammingExample", "KitaProgrammingExample\KitaProgrammingExample.csproj", "{911EFA73-AC79-4748-AA92-BBC5D2F0E3AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitaProgrammingExampleTests", "KitaProgrammingExampleTests\KitaProgrammingExampleTests.csproj", "{8D026BAA-2818-47EF-A21F-E9E9DB21760A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KitaProgrammingExampleTests", "KitaProgrammingExampleTests\KitaProgrammingExampleTests.csproj", "{8D026BAA-2818-47EF-A21F-E9E9DB21760A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KitaProgrammingExampleSpecflowTests", "KitaProgrammingExampleSpecflowTests\KitaProgrammingExampleSpecflowTests.csproj", "{410E1F0B-2697-40A3-A500-3092C95B8A27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8D026BAA-2818-47EF-A21F-E9E9DB21760A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D026BAA-2818-47EF-A21F-E9E9DB21760A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D026BAA-2818-47EF-A21F-E9E9DB21760A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{410E1F0B-2697-40A3-A500-3092C95B8A27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{410E1F0B-2697-40A3-A500-3092C95B8A27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{410E1F0B-2697-40A3-A500-3092C95B8A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{410E1F0B-2697-40A3-A500-3092C95B8A27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
