@@ -17,7 +17,7 @@ namespace KitaProgrammingExampleTests
         }
 
         [TestMethod]
-        public void TestAdditionNoNumbers()
+        public void TestAdditionOutOfBoundNumbers()
         {
             int number1 = 10;
             int number2 = 2147483646;
