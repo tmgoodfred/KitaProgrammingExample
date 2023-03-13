@@ -24,5 +24,7 @@ namespace KitaProgrammingExampleTests
             Main KitaMain = new Main();
             Assert.ThrowsException<SystemException>(() => KitaMain.TryToDoMath(number1, number2));
         }
+
+        //TODO - create unit test for CheckIfItemExists
     }
 }
