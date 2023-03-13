@@ -1,9 +1,9 @@
 namespace KitaProgrammingExample
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         List<string> songs = new List<string>();    //need to create the list to hold all the song titles
-        public Form1()
+        public Main()
         {
             InitializeComponent();  //this is auto-generated
         }
@@ -30,6 +30,11 @@ namespace KitaProgrammingExample
                 outputTxt.Text = "We'll add it.";
                 songs.Add(songTitle);   //if the song doesn't exist, we add it to the list
             }
+        }
+
+        public int TryToDoMath(int num1, int num2)
+        {
+            return num1 + num2;
         }
     }
 }
