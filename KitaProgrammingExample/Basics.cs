@@ -15,8 +15,12 @@ namespace KitaProgrammingExample
         string lotsOfLetters = "Hello, my name is Kita";    //this hold a long list of characters/letters usually in the form of words and sentances.
         char oneLetter = 'A';   //holds one letter
         bool trueOrFalse = true;    //holds a value of true or false
-        int[] arrayOfNumbers = {1, 2, 3, 4, 5}; //array of size 5, each number in here is from 0-4
+        int[] arrayOfNumbers = {2345, 432, 234, 542, 3424}; //array of size 5, each number in here is from 0-4
+        //arrayOfNumbers[0] = 2345;
         string[] arrayOfStrings = {"Hello", "This", "Is", "Array" }; //array of size 4, each word is from 0-3
+        //arrayOfString[3] = "Array";
+        List<int> listOfThings = new List<int>();
+        //listOfThings.Add(4);
 
         public void Main()  //this is just here so I have a place to put my code
         {
@@ -25,13 +29,17 @@ namespace KitaProgrammingExample
             {
                 Console.WriteLine("This is not based");
             }
+            else if (number == 420)
+            {
+                Console.WriteLine("smonk weed!");
+            }
             else
             {
                 Console.WriteLine("Nice!");
             }
 
             //for loop - used when you want something to happen multiple times - but a set number, like you want to print a word 5 times
-            for (int i = 0; i < 5; i++)
+            for (int i = 1; i <= 5; i++) //i++ = i = i+1; i=7 | i = 7+1
             {
                 Console.WriteLine("The number is: " + i);   //this Console.WriteLine(""); is used to print output to the IDE (Visua Studio) so you can see
             }
@@ -54,7 +62,7 @@ namespace KitaProgrammingExample
             }
 
             //switch statements - they aren't used too often but can be handy on occasion
-            int day = 1;
+            int day = 4;
             switch (day)
             {
                 case 1: //right now since our day variable is = 1, this is what will happen. 
@@ -97,6 +105,8 @@ namespace KitaProgrammingExample
         {
             ThisWillAddTwoIntegers(1, 4);   //this is add the two numbers, but won't do anything with it really. To make it useful, do this:
             int addedNumbers = ThisWillAddTwoIntegers(1, 4);   //now we have the result stored somewhere useful!
+            //int addedNumbers = returned value of the method
+            int addedNumbers2 = ThisWillAddTwoIntegers(5,6);
 
             //you can also send variables to the method
             int thisIsANumber = 53;
@@ -104,7 +114,7 @@ namespace KitaProgrammingExample
             int resultOfThose = ThisWillAddTwoIntegers(thisIsANumber, thisIsAnotherNumber); //notice how I don't have to name the variables what I named them in the method declaration before (number1 and number2) they don't have to match names, only variable types
 
             //to use the void one, we only have to call it
-            MakeSomethingHappen();
+            MakeSomethingHappen();  //this will print "You called a method!"
         }
 
 
