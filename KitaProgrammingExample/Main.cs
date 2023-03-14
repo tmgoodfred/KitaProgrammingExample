@@ -5,6 +5,7 @@ namespace KitaProgrammingExample
         List<string> songs = new List<string>();    //need to create the list to hold all the song titles
         public Main()
         {
+            //test
             InitializeComponent();  //this is auto-generated
         }
 
