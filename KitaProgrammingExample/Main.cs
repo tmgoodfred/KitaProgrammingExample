@@ -69,5 +69,12 @@ namespace KitaProgrammingExample
             else
                 outputTxt.Text = "We'll add it.";
         }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            outputTxt.Clear();
+            songTxt.Clear();
+            artistTxt.Clear();
+        }
     }
 }

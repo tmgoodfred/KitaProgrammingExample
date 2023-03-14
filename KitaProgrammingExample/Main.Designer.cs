@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.submitBtn = new System.Windows.Forms.Button();
             this.outputTxt = new System.Windows.Forms.TextBox();
+            this.clearBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // songTxt
@@ -85,18 +86,29 @@
             this.outputTxt.Size = new System.Drawing.Size(150, 31);
             this.outputTxt.TabIndex = 5;
             // 
-            // Form1
+            // clearBtn
+            // 
+            this.clearBtn.Location = new System.Drawing.Point(814, 140);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(112, 34);
+            this.clearBtn.TabIndex = 6;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1005, 360);
+            this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.outputTxt);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.artistTxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.songTxt);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Music Info";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -111,5 +123,6 @@
         private Label label2;
         private Button submitBtn;
         private TextBox outputTxt;
+        private Button clearBtn;
     }
 }
