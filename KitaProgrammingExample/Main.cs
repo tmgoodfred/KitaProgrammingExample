@@ -1,11 +1,19 @@
+using System.IO;
+
 namespace KitaProgrammingExample
 {
     public partial class Main : Form
     {
         List<string> songs = new List<string>();    //need to create the list to hold all the song titles
+        List<string> albumArtists = new List<string>();
+        List<string> songLists = new List<string>();
         public Main()
         {
             //test
+            string[] albums = Directory.GetFiles(@"~\albumart");
+            string[] songs = Directory.GetFiles(@"~\songlists");
+            albumArtists = albums.ToList();
+            songLists = songs.ToList();
             InitializeComponent();  //this is auto-generated
         }
 
@@ -28,6 +36,33 @@ namespace KitaProgrammingExample
             {
                 setOutput(false);
                 songs.Add(songTitle);   //if the song doesn't exist, we add it to the list
+            }
+
+            if (albumArtists.Contains(@"~\albumart\" + songTitle.ToLower() + ".jpg") == true || albumArtists.Contains(@"~\albumart\" + artistName.ToLower() + ".jpg") == true)   //if we have a match on the song title with an album 
+            {
+                try
+                {
+                    albumArt.Image = Image.FromFile(@"~\albumart\" + songTitle + ".jpg");
+                }
+                catch { }
+                try
+                {
+                    albumArt.Image = Image.FromFile(@"~\albumart\" + artistName + ".jpg");
+                }
+                catch { }
+            }
+            if (songLists.Contains(@"~\songlists\" + songTitle.ToLower() + ".txt") == true || songLists.Contains(@"~\songlists\" + artistName.ToLower() + ".txt") == true)
+            {
+                try
+                {
+                    trackList.Text = File.ReadAllText(@"~\songlists\" + songTitle + ".txt");
+                }
+                catch { }
+                try
+                {
+                    trackList.Text = File.ReadAllText(@"~\songlists\" + artistName + ".txt");
+                }
+                catch { }
             }
         }
 
@@ -75,6 +110,8 @@ namespace KitaProgrammingExample
             outputTxt.Clear();
             songTxt.Clear();
             artistTxt.Clear();
+            albumArt.Image = null;
+            trackList.Clear();
         }
     }
 }

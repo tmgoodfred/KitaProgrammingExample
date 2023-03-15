@@ -35,11 +35,14 @@
             this.submitBtn = new System.Windows.Forms.Button();
             this.outputTxt = new System.Windows.Forms.TextBox();
             this.clearBtn = new System.Windows.Forms.Button();
+            this.albumArt = new System.Windows.Forms.PictureBox();
+            this.trackList = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.albumArt)).BeginInit();
             this.SuspendLayout();
             // 
             // songTxt
             // 
-            this.songTxt.Location = new System.Drawing.Point(353, 106);
+            this.songTxt.Location = new System.Drawing.Point(249, 43);
             this.songTxt.Name = "songTxt";
             this.songTxt.Size = new System.Drawing.Size(297, 31);
             this.songTxt.TabIndex = 0;
@@ -47,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(256, 109);
+            this.label1.Location = new System.Drawing.Point(145, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 25);
             this.label1.TabIndex = 1;
@@ -55,7 +58,7 @@
             // 
             // artistTxt
             // 
-            this.artistTxt.Location = new System.Drawing.Point(353, 157);
+            this.artistTxt.Location = new System.Drawing.Point(249, 87);
             this.artistTxt.Name = "artistTxt";
             this.artistTxt.Size = new System.Drawing.Size(297, 31);
             this.artistTxt.TabIndex = 2;
@@ -63,7 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(241, 160);
+            this.label2.Location = new System.Drawing.Point(130, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 25);
             this.label2.TabIndex = 3;
@@ -71,24 +74,24 @@
             // 
             // submitBtn
             // 
-            this.submitBtn.Location = new System.Drawing.Point(434, 247);
+            this.submitBtn.Location = new System.Drawing.Point(330, 135);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(112, 34);
             this.submitBtn.TabIndex = 4;
-            this.submitBtn.Text = "Submit";
+            this.submitBtn.Text = "Search";
             this.submitBtn.UseVisualStyleBackColor = true;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // outputTxt
             // 
-            this.outputTxt.Location = new System.Drawing.Point(419, 210);
+            this.outputTxt.Location = new System.Drawing.Point(773, 67);
             this.outputTxt.Name = "outputTxt";
             this.outputTxt.Size = new System.Drawing.Size(150, 31);
             this.outputTxt.TabIndex = 5;
             // 
             // clearBtn
             // 
-            this.clearBtn.Location = new System.Drawing.Point(814, 140);
+            this.clearBtn.Location = new System.Drawing.Point(617, 67);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(112, 34);
             this.clearBtn.TabIndex = 6;
@@ -96,11 +99,30 @@
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
+            // albumArt
+            // 
+            this.albumArt.Location = new System.Drawing.Point(145, 264);
+            this.albumArt.Name = "albumArt";
+            this.albumArt.Size = new System.Drawing.Size(400, 400);
+            this.albumArt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.albumArt.TabIndex = 7;
+            this.albumArt.TabStop = false;
+            // 
+            // trackList
+            // 
+            this.trackList.Location = new System.Drawing.Point(630, 264);
+            this.trackList.Multiline = true;
+            this.trackList.Name = "trackList";
+            this.trackList.Size = new System.Drawing.Size(313, 380);
+            this.trackList.TabIndex = 8;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 360);
+            this.ClientSize = new System.Drawing.Size(1085, 746);
+            this.Controls.Add(this.trackList);
+            this.Controls.Add(this.albumArt);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.outputTxt);
             this.Controls.Add(this.submitBtn);
@@ -110,6 +132,7 @@
             this.Controls.Add(this.songTxt);
             this.Name = "Main";
             this.Text = "Music Info";
+            ((System.ComponentModel.ISupportInitialize)(this.albumArt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +147,7 @@
         private Button submitBtn;
         private TextBox outputTxt;
         private Button clearBtn;
+        private PictureBox albumArt;
+        private TextBox trackList;
     }
 }
