@@ -10,8 +10,8 @@ namespace KitaProgrammingExample
         public Main()
         {
             //test
-            string[] albums = Directory.GetFiles(@"~\albumart");
-            string[] songs = Directory.GetFiles(@"~\songlists");
+            string[] albums = Directory.GetFiles(@"~\albumart");    //wherever your code is stored + KitaProgrammingExample\KitaProgrammingExample\bin\Debug\net6.0-windows\~\albumart
+            string[] songs = Directory.GetFiles(@"~\songlists");    //wherever your code is stored + KitaProgrammingExample\KitaProgrammingExample\bin\Debug\net6.0-windows\~\songlists
             albumArtists = albums.ToList();
             songLists = songs.ToList();
             InitializeComponent();  //this is auto-generated
@@ -38,7 +38,7 @@ namespace KitaProgrammingExample
                 songs.Add(songTitle);   //if the song doesn't exist, we add it to the list
             }
 
-            if (albumArtists.Contains(@"~\albumart\" + songTitle.ToLower() + ".jpg") == true || albumArtists.Contains(@"~\albumart\" + artistName.ToLower() + ".jpg") == true)   //if we have a match on the song title with an album 
+            if (albumArtists.Contains(@"~\albumart\" + songTitle.ToLower() + ".jpg") == true || albumArtists.Contains(@"~\albumart\" + artistName.ToLower() + ".jpg") == true)   //if we have a match on the song or artist title with an album art we'll display the album art
             {
                 try
                 {
@@ -51,7 +51,7 @@ namespace KitaProgrammingExample
                 }
                 catch { }
             }
-            if (songLists.Contains(@"~\songlists\" + songTitle.ToLower() + ".txt") == true || songLists.Contains(@"~\songlists\" + artistName.ToLower() + ".txt") == true)
+            if (songLists.Contains(@"~\songlists\" + songTitle.ToLower() + ".txt") == true || songLists.Contains(@"~\songlists\" + artistName.ToLower() + ".txt") == true)  //if we have a match on the song or artist title with a track list we'll display it
             {
                 try
                 {
